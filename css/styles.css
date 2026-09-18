@@ -1,0 +1,31 @@
+/* Fondo del sitio según el mockup */
+body {
+    background-color: #FFFFFF;
+}
+
+/* Fondo del encabezado según el mockup */
+header {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    padding: 16px 20px;
+}
+
+/* 9. Impresión: prepara la página para imprimir */
+@media print {
+
+    /* Oculta el menú al imprimir */
+    nav {
+        display: none;
+    }
+
+    /* Oculta los botones al imprimir */
+    button {
+        display: none;
+    }
+
+    /* Usa texto negro y fondo blanco al imprimir */
+    body {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+}
