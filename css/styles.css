@@ -1,0 +1,95 @@
+/* Fondo del sitio según el mockup */
+body {
+    background-color: #FFFFFF;
+}
+
+/* Fondo del encabezado según el mockup */
+header {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+    padding: 16px 20px;
+}
+
+/* SECCIÓN 3 · DICCIONARIO DE CLASES
+   tarjeta
+   precio
+   titulo-producto
+   boton-principal
+   boton-secundario
+   badge-oferta
+   menu-principal
+*/
+
+/* Menú principal */
+.menu-principal {
+    padding: 10px;
+}
+
+/* Tarjetas de productos */
+.tarjeta {
+    padding: 20px;
+    margin: 20px;
+    border: 1px solid #CCCCCC;
+}
+
+/* Título del producto */
+.titulo-producto {
+    color: #2E7D32;
+}
+
+/* Precio */
+.precio {
+    color: #555555;
+}
+
+/* Estilos compartidos de los botones */
+.boton-principal,
+.boton-secundario {
+    display: inline-block;
+    padding: 10px 14px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* Lo propio del botón principal */
+.boton-principal {
+    background-color: #2E7D32;
+    color: #FFFFFF;
+}
+
+/* Lo propio del botón secundario */
+.boton-secundario {
+    background-color: #FBC02D;
+    color: #333333;
+}
+
+/* Etiqueta de oferta */
+.badge-oferta {
+    display: inline-block;
+    padding: 5px 8px;
+    background-color: #C62828;
+    color: #FFFFFF;
+    border-radius: 4px;
+}
+
+/* 9. Impresión: prepara la página para imprimir */
+@media print {
+
+    /* Oculta el menú al imprimir */
+    .menu-principal {
+        display: none;
+    }
+
+    /* Oculta los botones al imprimir */
+    .boton-principal,
+    .boton-secundario {
+        display: none;
+    }
+
+    /* Usa texto negro y fondo blanco al imprimir */
+    body {
+        color: #000000;
+        background-color: #FFFFFF;
+    }
+}
