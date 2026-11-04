@@ -1,95 +1,857 @@
-/* Fondo del sitio según el mockup */
+
+/* ==================================================
+   FARMACIA LA ESQUINA
+   Diseño moderno, elegante y profesional
+================================================== */
+
+/* 1. CONFIGURACIÓN GENERAL */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
 body {
-    background-color: #FFFFFF;
+    font-family: Arial, sans-serif;
+    background: #F5F8F5;
+    color: #26352A;
+    line-height: 1.6;
 }
 
-/* Fondo del encabezado según el mockup */
-header {
-    background-color: #2E7D32;
-    color: #FFFFFF;
-    padding: 16px 20px;
+/* 2. ENCABEZADO */
+
+.encabezado {
+    background: #FFFFFF;
+    padding: 20px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    border-bottom: 3px solid #2E7D32;
+    box-shadow: 0 3px 15px #00000008;
 }
 
-/* SECCIÓN 3 · DICCIONARIO DE CLASES
-   tarjeta
-   precio
-   titulo-producto
-   boton-principal
-   boton-secundario
-   badge-oferta
-   menu-principal
-*/
-
-/* Menú principal */
-.menu-principal {
-    padding: 10px;
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #1B5E20;
 }
 
-/* Tarjetas de productos */
-.tarjeta {
-    padding: 20px;
-    margin: 20px;
-    border: 1px solid #CCCCCC;
+.logo span {
+    background: linear-gradient(135deg, #43A047, #1B5E20);
+    color: white;
+    padding: 12px;
+    border-radius: 12px;
+    font-size: 25px;
+    box-shadow: 0 5px 12px #2E7D3240;
 }
 
-/* Título del producto */
-.titulo-producto {
-    color: #2E7D32;
+.logo small {
+    color: #777777;
 }
 
-/* Precio */
-.precio {
-    color: #555555;
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
-/* Estilos compartidos de los botones */
-.boton-principal,
-.boton-secundario {
-    display: inline-block;
-    padding: 10px 14px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-/* Lo propio del botón principal */
-.boton-principal {
-    background-color: #2E7D32;
-    color: #FFFFFF;
-}
-
-/* Lo propio del botón secundario */
-.boton-secundario {
-    background-color: #FBC02D;
+nav a {
+    text-decoration: none;
     color: #333333;
+    padding: 10px 15px;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: all 0.3s ease;
 }
 
-/* Etiqueta de oferta */
-.badge-oferta {
+nav a:hover,
+nav a.activo {
+    background: #E8F5E9;
+    color: #2E7D32;
+    transform: translateY(-2px);
+}
+
+/* 3. PORTADA PRINCIPAL */
+
+.portada {
+    background: linear-gradient(135deg, #E8F5E9, #F5FBF5);
+    padding: 75px 8%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 40px;
+}
+
+.etiqueta {
     display: inline-block;
-    padding: 5px 8px;
-    background-color: #C62828;
-    color: #FFFFFF;
-    border-radius: 4px;
+    background: #FFFFFF;
+    color: #2E7D32;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 2px;
+    padding: 8px 15px;
+    border-radius: 30px;
+    box-shadow: 0 3px 10px #00000008;
 }
 
-/* 9. Impresión: prepara la página para imprimir */
-@media print {
+.portada h1 {
+    font-size: 45px;
+    line-height: 1.2;
+    color: #1B5E20;
+    margin: 20px 0;
+}
 
-    /* Oculta el menú al imprimir */
-    .menu-principal {
-        display: none;
+.portada p {
+    line-height: 1.8;
+    margin-bottom: 25px;
+    color: #465448;
+}
+
+/* 4. BOTONES */
+
+.boton {
+    display: inline-block;
+    background: linear-gradient(135deg, #43A047, #2E7D32);
+    color: white;
+    padding: 14px 24px;
+    border-radius: 10px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 5px 12px #2E7D3230;
+    transition: all 0.3s ease;
+}
+
+.boton:hover {
+    background: #1B5E20;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px #2E7D3240;
+}
+
+/* 5. IMAGEN PRINCIPAL */
+
+.imagen-portada {
+    width: 100%;
+    height: 350px;
+    border-radius: 22px;
+    overflow: hidden;
+    margin: 25px 0;
+    box-shadow: 0 12px 30px #00000020;
+    border: 5px solid #FFFFFF;
+    transition: transform 0.4s ease;
+}
+
+.imagen-portada:hover {
+    transform: scale(1.02);
+}
+
+.imagen-portada img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.cruz {
+    font-size: 120px;
+}
+
+/* 6. BENEFICIOS */
+
+.beneficios {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    gap: 20px;
+    padding: 35px 6%;
+    background: #FFFFFF;
+    flex-wrap: wrap;
+    box-shadow: 0 4px 15px #00000008;
+}
+
+/* 7. CONTENIDO GENERAL */
+
+.contenido {
+    text-align: center;
+    padding: 70px 6%;
+}
+
+.contenido h2 {
+    font-size: 32px;
+    color: #1B5E20;
+    margin: 15px;
+}
+
+.contenido > p {
+    color: #666666;
+    margin-bottom: 30px;
+}
+
+/* 8. TARJETAS */
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 35px;
+}
+
+.tarjeta {
+    background: #FFFFFF;
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 5px 18px #0000000D;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px #00000015;
+}
+
+.icono {
+    font-size: 45px;
+    margin-bottom: 15px;
+}
+
+.tarjeta h3 {
+    color: #2E7D32;
+    margin-bottom: 12px;
+}
+
+.tarjeta p {
+    color: #666666;
+    margin-bottom: 18px;
+}
+
+.tarjeta a {
+    color: #2E7D32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.tarjeta a:hover {
+    color: #1B5E20;
+    text-decoration: underline;
+}
+
+/* 9. LLAMADA A LA ACCIÓN */
+
+.llamada {
+    background: linear-gradient(135deg, #2E7D32, #1B5E20);
+    color: #FFFFFF;
+    text-align: center;
+    padding: 60px 20px;
+}
+
+.llamada h2 {
+    margin-bottom: 12px;
+}
+
+.llamada p {
+    margin: 15px;
+}
+
+.blanco {
+    background: #FFFFFF;
+    color: #1B5E20;
+    box-shadow: none;
+}
+
+.blanco:hover {
+    background: #E8F5E9;
+}
+
+/* 10. PIE DE PÁGINA */
+
+footer {
+    background: #123D18;
+    color: #FFFFFF;
+    padding: 35px 20px;
+    text-align: center;
+    line-height: 2;
+}
+
+footer a {
+    color: #C8E6C9;
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: #FFFFFF;
+    text-decoration: underline;
+}
+
+/* 11. PÁGINAS INTERNAS */
+
+.titulo-pagina {
+    background: linear-gradient(135deg, #E8F5E9, #F5FBF5);
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.titulo-pagina h1 {
+    color: #1B5E20;
+    font-size: 36px;
+}
+
+.seccion {
+    max-width: 1100px;
+    margin: auto;
+    padding: 55px 25px;
+}
+
+.seccion h2 {
+    color: #1B5E20;
+    margin-bottom: 20px;
+}
+
+/* 12. CATÁLOGO */
+
+.buscador {
+    width: 100%;
+    padding: 15px;
+    border: 1px solid #D5E2D5;
+    border-radius: 10px;
+    margin: 20px 0;
+    font-size: 15px;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.buscador:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px #2E7D321A;
+}
+
+.filtros {
+    margin-bottom: 25px;
+}
+
+.filtros button,
+.producto button,
+.btn-formulario {
+    background: #2E7D32;
+    color: #FFFFFF;
+    border: none;
+    padding: 12px 18px;
+    border-radius: 9px;
+    cursor: pointer;
+    margin: 5px;
+    font-weight: bold;
+    transition: all 0.3s ease;
+}
+
+.filtros button:hover,
+.producto button:hover,
+.btn-formulario:hover {
+    background: #1B5E20;
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px #2E7D3240;
+}
+
+/* CUADRÍCULA DE PRODUCTOS */
+
+.productos {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 22px;
+    align-items: stretch;
+}
+
+/* TARJETA DE PRODUCTO */
+
+.producto {
+    width: 100%;
+    min-width: 0;
+    background: #FFFFFF;
+    padding: 25px;
+    border-radius: 16px;
+    text-align: center;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 5px 15px #0000000D;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.producto:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 25px #00000015;
+}
+
+.producto .icono {
+    font-size: 50px;
+}
+
+.producto h3 {
+    color: #1B5E20;
+    margin-bottom: 8px;
+}
+
+.producto > p {
+    color: #68756A;
+}
+
+/* FOTOGRAFÍAS DEL CATÁLOGO */
+
+.producto .imagen-producto {
+    display: block;
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    padding: 10px;
+    margin: 0 auto 15px;
+    background: #F9FCF9;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+}
+
+.producto:hover .imagen-producto {
+    transform: scale(1.04);
+}
+
+/* PRECIO Y BOTÓN */
+
+.producto .precio {
+    display: block;
+    color: #2E7D32;
+    font-size: 21px;
+    font-weight: bold;
+    margin: 12px;
+}
+
+.producto button {
+    width: 100%;
+    margin: 12px 0 0;
+    padding: 13px;
+    font-size: 14px;
+}
+
+/* 13. CARRITO */
+
+.carrito {
+    background: #FFFFFF;
+    padding: 28px;
+    margin-top: 35px;
+    border-radius: 15px;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 5px 15px #0000000D;
+}
+
+.carrito p {
+    margin: 10px 0;
+}
+
+.producto-carrito {
+    padding: 15px;
+    margin-bottom: 12px;
+    background: #F5F8F5;
+    border: 1px solid #E5EEE5;
+    border-radius: 10px;
+}
+
+.producto-carrito h4 {
+    color: #1B5E20;
+    margin-bottom: 8px;
+}
+
+.producto-carrito p {
+    color: #536357;
+    margin: 5px 0;
+}
+
+/* 14. SERVICIOS */
+
+.servicios {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+}
+
+.servicio {
+    background: #FFFFFF;
+    padding: 28px;
+    border-radius: 15px;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 5px 15px #0000000D;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.servicio:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 22px #00000015;
+}
+
+/* 15. CONTACTO */
+
+.formulario {
+    max-width: 650px;
+    margin: auto;
+    background: #FFFFFF;
+    padding: 32px;
+    border-radius: 18px;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 6px 20px #00000010;
+}
+
+.formulario label {
+    display: block;
+    margin-top: 15px;
+    font-weight: bold;
+    color: #1B5E20;
+}
+
+.formulario input,
+.formulario textarea,
+.formulario select {
+    width: 100%;
+    padding: 13px;
+    margin-top: 7px;
+    border: 1px solid #D5E2D5;
+    border-radius: 9px;
+    font-family: Arial, sans-serif;
+    outline: none;
+    transition: border 0.3s ease, box-shadow 0.3s ease;
+}
+
+.formulario input:focus,
+.formulario textarea:focus,
+.formulario select:focus {
+    border-color: #2E7D32;
+    box-shadow: 0 0 0 3px #2E7D321A;
+}
+
+.formulario textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#mensaje {
+    margin-top: 15px;
+}
+
+/* 16. DISEÑO ESPECIAL DEL CATÁLOGO */
+
+.catalogo-portada {
+    padding: 65px 20px;
+}
+
+.catalogo-portada h1 {
+    color: #1B5E20;
+    font-size: 38px;
+    margin: 15px 0;
+}
+
+.catalogo-portada p {
+    color: #536357;
+    max-width: 600px;
+    margin: auto;
+}
+
+.catalogo-intro {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-bottom: 30px;
+}
+
+.catalogo-intro h2 {
+    color: #1B5E20;
+    margin-bottom: 8px;
+}
+
+.catalogo-intro p {
+    color: #68756A;
+}
+
+.catalogo-sello {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    padding: 15px;
+    border-radius: 12px;
+    border: 1px solid #E5EEE5;
+}
+
+.catalogo-sello span {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 25px;
+}
+
+.catalogo-sello strong,
+.catalogo-sello small {
+    display: block;
+}
+
+.catalogo-sello strong {
+    color: #1B5E20;
+}
+
+.catalogo-sello small {
+    color: #777;
+}
+
+.zona-buscador {
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    margin-bottom: 35px;
+    border: 1px solid #E5EEE5;
+    box-shadow: 0 5px 15px #00000008;
+}
+
+.zona-buscador label {
+    display: block;
+    color: #1B5E20;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.zona-buscador .buscador {
+    margin: 0;
+}
+
+.catalogo-subtitulo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.catalogo-subtitulo h2 {
+    color: #1B5E20;
+}
+
+.catalogo-subtitulo span {
+    color: #777;
+    font-size: 14px;
+}
+
+.carrito-encabezado {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.carrito-encabezado h2 {
+    color: #1B5E20;
+}
+
+.carrito-encabezado span {
+    background: #E8F5E9;
+    color: #2E7D32;
+    padding: 7px 13px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: bold;
+}
+
+.carrito-resumen {
+    padding: 12px;
+    background: #F5F8F5;
+    border-radius: 9px;
+}
+
+.carrito-total {
+    border-top: 1px solid #E5EEE5;
+    margin-top: 20px;
+    padding-top: 20px;
+}
+
+.carrito-total h3 {
+    color: #1B5E20;
+}
+
+.catalogo-mensaje {
+    text-align: center;
+    background: #E8F5E9;
+    padding: 40px 20px;
+    border-radius: 18px;
+    margin-top: 45px;
+}
+
+.catalogo-mensaje span {
+    font-size: 40px;
+}
+
+.catalogo-mensaje h2 {
+    color: #1B5E20;
+    margin: 12px 0;
+}
+
+.catalogo-mensaje p {
+    color: #536357;
+    max-width: 550px;
+    margin: auto;
+}
+
+/* 17. ANIMACIONES */
+
+.portada,
+.beneficios,
+.contenido {
+    animation: aparecer 0.8s ease;
+}
+
+@keyframes aparecer {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
     }
 
-    /* Oculta los botones al imprimir */
-    .boton-principal,
-    .boton-secundario {
-        display: none;
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* 18. ACCESIBILIDAD */
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible,
+select:focus-visible {
+    outline: 3px solid #81C784;
+    outline-offset: 3px;
+}
+
+/* 19. DISEÑO RESPONSIVE */
+
+@media (max-width: 900px) {
+
+    .portada {
+        gap: 25px;
+        padding: 55px 6%;
     }
 
-    /* Usa texto negro y fondo blanco al imprimir */
-    body {
-        color: #000000;
-        background-color: #FFFFFF;
+    .portada h1 {
+        font-size: 38px;
     }
+
+    .tarjetas,
+    .productos {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 700px) {
+
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    nav {
+        justify-content: center;
+    }
+
+    .portada {
+        grid-template-columns: 1fr;
+        text-align: center;
+        padding: 45px 6%;
+    }
+
+    .portada h1 {
+        font-size: 34px;
+    }
+
+    .imagen-portada {
+        height: 280px;
+    }
+
+    .tarjetas,
+    .productos,
+    .servicios {
+        grid-template-columns: 1fr;
+    }
+
+    .contenido {
+        padding: 50px 5%;
+    }
+
+    .contenido h2 {
+        font-size: 27px;
+    }
+
+    .titulo-pagina h1 {
+        font-size: 30px;
+    }
+
+    .formulario {
+        padding: 22px;
+    }
+
+    .catalogo-portada h1 {
+        font-size: 30px;
+    }
+
+    .catalogo-intro {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .catalogo-sello {
+        width: 100%;
+    }
+
+    .catalogo-subtitulo {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .carrito-encabezado {
+        align-items: flex-start;
+    }
+}
+
+/* 20. RESPETAR PREFERENCIAS DE MOVIMIENTO */
+
+@media (prefers-reduced-motion: reduce) {
+
+    html {
+        scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        transition-duration: 0.01ms !important;
+    }
+}
+
+/* CORRECCIÓN DEL TAMAÑO DE IMAGEN */
+
+#lista-productos .producto {
+    width: 100%;
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+#lista-productos .producto img.imagen-producto {
+    display: block;
+    width: 100%;
+    max-width: 250px;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto 15px;
 }

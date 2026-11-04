@@ -1,54 +1,118 @@
+
 <!DOCTYPE html>
 <html lang="es">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Productos - Farmacia La Esquina</title>
 
+    <title>Productos | Farmacia La Esquina</title>
+
+    <!-- Conectar CSS -->
     <link rel="stylesheet" href="../css/styles.css">
+
+    <!-- Control del tamaño de las imágenes -->
+    <style>
+        #lista-productos .producto img.imagen-producto {
+            display: block;
+            width: 200px !important;
+            max-width: 100% !important;
+            height: 180px !important;
+            object-fit: contain !important;
+            margin: 15px auto;
+        }
+    </style>
+
+    <!-- Conectar JavaScript -->
+    <script src="../assets/js/main.js" defer></script>
 </head>
 
 <body>
 
-    <header>
+    <!-- ENCABEZADO -->
+    <header class="header">
+
         <h1>Farmacia La Esquina</h1>
-        <p>Productos</p>
+
+        <nav>
+            <a href="../index.html">Inicio</a>
+            <a href="productos.html">Productos</a>
+            <a href="servicio.html">Servicios</a>
+            <a href="contacto.html">Contacto</a>
+        </nav>
+
     </header>
 
-    <nav class="menu-principal">
-        <a href="../index.html">Inicio</a>
-        <a href="productos.html">Productos</a>
-        <a href="servicios.html">Servicios</a>
-        <a href="contacto.html">Contacto</a>
-    </nav>
 
-    <main>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main class="contenedor">
 
-        <article class="tarjeta">
+        <h2>Nuestros productos</h2>
 
-            <h2 class="titulo-producto">Paracetamol</h2>
+        <p>
+            Encuentra los productos que necesitas para tu bienestar.
+        </p>
 
-            <p class="precio">RD$ 150</p>
 
-            <button class="boton-principal">Comprar</button>
+        <!-- BUSCADOR -->
+        <div class="buscador">
 
-        </article>
+            <input
+                type="text"
+                id="buscador"
+                placeholder="Buscar productos..."
+            >
 
-        <article class="tarjeta">
+        </div>
 
-            <span class="badge-oferta">Oferta</span>
 
-            <h2 class="titulo-producto">Vitamina C</h2>
+        <!-- LISTA DE PRODUCTOS -->
+        <div id="lista-productos" class="productos">
 
-            <p class="precio">RD$ 250</p>
+            <!-- JavaScript mostrará aquí los productos -->
 
-            <button class="boton-secundario">Ver producto</button>
+        </div>
 
-        </article>
+
+        <!-- CARRITO DE COMPRAS -->
+        <section class="carrito">
+
+            <h2>🛒 Mi carrito</h2>
+
+            <p>
+                Productos:
+                <span id="contador">0</span>
+            </p>
+
+            <div id="productos-carrito">
+
+                <p>Tu carrito está vacío.</p>
+
+            </div>
+
+            <h3>
+                Total:
+                <span id="total">RD$ 0.00</span>
+            </h3>
+
+            <button id="vaciar" type="button">
+                Vaciar carrito
+            </button>
+
+        </section>
 
     </main>
 
-</body>
 
+    <!-- PIE DE PÁGINA -->
+    <footer>
+
+        <p>
+            &copy; 2026 Farmacia La Esquina.
+            Todos los derechos reservados.
+        </p>
+
+    </footer>
+
+</body>
 </html>
