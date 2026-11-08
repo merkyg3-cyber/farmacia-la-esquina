@@ -1,8 +1,8 @@
 
-/* ==================================================
+/* =====================================================
    FARMACIA LA ESQUINA
-   Diseño moderno, elegante y profesional
-================================================== */
+   Diseño moderno, limpio y profesional
+===================================================== */
 
 /* 1. CONFIGURACIÓN GENERAL */
 
@@ -17,454 +17,503 @@ html {
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #F5F8F5;
     color: #26352A;
     line-height: 1.6;
 }
 
-/* 2. ENCABEZADO */
+img {
+    max-width: 100%;
+}
+
+a {
+    text-decoration: none;
+}
+
+/* 2. ENCABEZADO Y NAVEGACIÓN */
 
 .encabezado {
+    width: 100%;
+    min-height: 85px;
+    padding: 15px 7%;
     background: #FFFFFF;
-    padding: 20px 6%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-    border-bottom: 3px solid #2E7D32;
-    box-shadow: 0 3px 15px #00000008;
+    gap: 25px;
+    border-bottom: 1px solid #E5EEE5;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.04);
 }
 
 .logo {
     display: flex;
     align-items: center;
     gap: 12px;
-    color: #1B5E20;
 }
 
 .logo span {
-    background: linear-gradient(135deg, #43A047, #1B5E20);
-    color: white;
-    padding: 12px;
-    border-radius: 12px;
-    font-size: 25px;
-    box-shadow: 0 5px 12px #2E7D3240;
+    color: #2E7D32;
+    font-size: 36px;
+}
+
+.logo h1,
+.logo h2 {
+    color: #1B5E20;
+    font-size: 23px;
+    line-height: 1.2;
 }
 
 .logo small {
-    color: #777777;
+    color: #68756A;
+    font-size: 12px;
 }
 
 nav {
     display: flex;
-    flex-wrap: wrap;
+    align-items: center;
     gap: 10px;
+    flex-wrap: wrap;
 }
 
 nav a {
-    text-decoration: none;
-    color: #333333;
+    color: #435348;
+    font-size: 15px;
+    font-weight: 600;
     padding: 10px 15px;
-    border-radius: 9px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+    border-radius: 7px;
+    transition: 0.2s ease;
 }
 
 nav a:hover,
 nav a.activo {
-    background: #E8F5E9;
-    color: #2E7D32;
-    transform: translateY(-2px);
+    color: #FFFFFF;
+    background: #2E7D32;
 }
 
-/* 3. PORTADA PRINCIPAL */
-
-.portada {
-    background: linear-gradient(135deg, #E8F5E9, #F5FBF5);
-    padding: 75px 8%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
-    gap: 40px;
-}
+/* 3. ELEMENTOS GENERALES */
 
 .etiqueta {
     display: inline-block;
-    background: #FFFFFF;
     color: #2E7D32;
     font-size: 12px;
     font-weight: bold;
-    letter-spacing: 2px;
-    padding: 8px 15px;
-    border-radius: 30px;
-    box-shadow: 0 3px 10px #00000008;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
 }
-
-.portada h1 {
-    font-size: 45px;
-    line-height: 1.2;
-    color: #1B5E20;
-    margin: 20px 0;
-}
-
-.portada p {
-    line-height: 1.8;
-    margin-bottom: 25px;
-    color: #465448;
-}
-
-/* 4. BOTONES */
 
 .boton {
     display: inline-block;
-    background: linear-gradient(135deg, #43A047, #2E7D32);
-    color: white;
-    padding: 14px 24px;
-    border-radius: 10px;
-    text-decoration: none;
+    background: #2E7D32;
+    color: #FFFFFF;
+    padding: 13px 22px;
+    border-radius: 7px;
     font-weight: bold;
-    box-shadow: 0 5px 12px #2E7D3230;
-    transition: all 0.3s ease;
+    transition: background 0.2s ease;
 }
 
 .boton:hover {
     background: #1B5E20;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 18px #2E7D3240;
 }
 
-/* 5. IMAGEN PRINCIPAL */
+button {
+    cursor: pointer;
+}
+
+/* 4. PORTADA DE INICIO */
+
+.portada {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 45px;
+    padding: 75px 8%;
+    background: #E8F5E9;
+}
+
+.texto-portada h1 {
+    color: #1B5E20;
+    font-size: clamp(32px, 4vw, 48px);
+    line-height: 1.2;
+    margin-bottom: 20px;
+}
+
+.texto-portada p {
+    color: #536357;
+    font-size: 17px;
+    margin-bottom: 25px;
+    max-width: 520px;
+}
 
 .imagen-portada {
-    width: 100%;
-    height: 350px;
-    border-radius: 22px;
+    position: relative;
+    min-height: 320px;
+    border-radius: 14px;
     overflow: hidden;
-    margin: 25px 0;
-    box-shadow: 0 12px 30px #00000020;
-    border: 5px solid #FFFFFF;
-    transition: transform 0.4s ease;
-}
-
-.imagen-portada:hover {
-    transform: scale(1.02);
+    background: #DCEBDD;
 }
 
 .imagen-portada img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
     display: block;
+    width: 100%;
+    height: 360px;
+    object-fit: cover;
 }
 
-.cruz {
-    font-size: 120px;
+.texto-imagen {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 22px;
+    color: #FFFFFF;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.75));
 }
 
-/* 6. BENEFICIOS */
+.texto-imagen h3 {
+    font-size: 21px;
+}
+
+.texto-imagen p {
+    font-size: 14px;
+}
+
+/* 5. BENEFICIOS */
 
 .beneficios {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
     gap: 20px;
-    padding: 35px 6%;
+    padding: 28px 8%;
     background: #FFFFFF;
-    flex-wrap: wrap;
-    box-shadow: 0 4px 15px #00000008;
 }
 
-/* 7. CONTENIDO GENERAL */
+.beneficios div {
+    text-align: center;
+    padding: 15px;
+    color: #2E7D32;
+    font-size: 17px;
+}
+
+.beneficios strong {
+    color: #344438;
+    margin-left: 5px;
+}
+
+/* 6. CONTENIDO Y TARJETAS DEL INICIO */
 
 .contenido {
+    padding: 70px 8%;
     text-align: center;
-    padding: 70px 6%;
 }
 
-.contenido h2 {
-    font-size: 32px;
+.contenido > h2 {
     color: #1B5E20;
-    margin: 15px;
+    font-size: 30px;
+    margin-bottom: 10px;
 }
 
 .contenido > p {
-    color: #666666;
-    margin-bottom: 30px;
+    color: #68756A;
+    margin-bottom: 35px;
 }
-
-/* 8. TARJETAS */
 
 .tarjetas {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 25px;
-    margin-top: 35px;
+    margin-top: 30px;
 }
 
 .tarjeta {
+    padding: 30px 25px;
     background: #FFFFFF;
-    padding: 32px;
-    border-radius: 18px;
     border: 1px solid #E5EEE5;
-    box-shadow: 0 5px 18px #0000000D;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    text-align: left;
+    transition: 0.2s ease;
 }
 
 .tarjeta:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 28px #00000015;
+    border-color: #A5D6A7;
+    transform: translateY(-3px);
 }
 
 .icono {
-    font-size: 45px;
-    margin-bottom: 15px;
-}
-
-.tarjeta h3 {
-    color: #2E7D32;
+    font-size: 35px;
     margin-bottom: 12px;
 }
 
+.tarjeta h3 {
+    color: #1B5E20;
+    margin-bottom: 10px;
+}
+
 .tarjeta p {
-    color: #666666;
-    margin-bottom: 18px;
+    color: #68756A;
+    margin-bottom: 15px;
 }
 
 .tarjeta a {
     color: #2E7D32;
-    text-decoration: none;
     font-weight: bold;
 }
 
-.tarjeta a:hover {
-    color: #1B5E20;
-    text-decoration: underline;
+/* 7. PROMOCIONES */
+
+.promociones {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    margin: 0 8% 60px;
+    padding: 40px;
+    background: #E8F5E9;
+    border-radius: 12px;
 }
 
-/* 9. LLAMADA A LA ACCIÓN */
+.promociones h2 {
+    color: #1B5E20;
+    font-size: 27px;
+    margin-bottom: 10px;
+}
+
+.promociones p {
+    color: #536357;
+    margin-bottom: 20px;
+}
+
+.promocion-icono {
+    font-size: 85px;
+}
+
+/* 8. LLAMADA A LA ACCIÓN */
 
 .llamada {
-    background: linear-gradient(135deg, #2E7D32, #1B5E20);
-    color: #FFFFFF;
+    padding: 55px 20px;
     text-align: center;
-    padding: 60px 20px;
+    color: #FFFFFF;
+    background: #1B5E20;
 }
 
 .llamada h2 {
-    margin-bottom: 12px;
+    font-size: 29px;
+    margin-bottom: 10px;
 }
 
 .llamada p {
-    margin: 15px;
+    margin-bottom: 22px;
 }
 
-.blanco {
-    background: #FFFFFF;
+.boton.blanco {
     color: #1B5E20;
-    box-shadow: none;
+    background: #FFFFFF;
 }
 
-.blanco:hover {
+.boton.blanco:hover {
     background: #E8F5E9;
 }
 
-/* 10. PIE DE PÁGINA */
-
-footer {
-    background: #123D18;
-    color: #FFFFFF;
-    padding: 35px 20px;
-    text-align: center;
-    line-height: 2;
-}
-
-footer a {
-    color: #C8E6C9;
-    text-decoration: none;
-}
-
-footer a:hover {
-    color: #FFFFFF;
-    text-decoration: underline;
-}
-
-/* 11. PÁGINAS INTERNAS */
+/* 9. TÍTULOS DE PÁGINAS INTERNAS */
 
 .titulo-pagina {
-    background: linear-gradient(135deg, #E8F5E9, #F5FBF5);
-    padding: 60px 20px;
+    padding: 45px 20px;
     text-align: center;
+    background: #E8F5E9;
 }
 
 .titulo-pagina h1 {
     color: #1B5E20;
-    font-size: 36px;
+    font-size: 34px;
+    margin-bottom: 8px;
 }
 
-.seccion {
-    max-width: 1100px;
-    margin: auto;
-    padding: 55px 25px;
+.titulo-pagina p {
+    color: #68756A;
 }
 
-.seccion h2 {
+.seccion,
+.contenedor {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+.seccion > h2 {
     color: #1B5E20;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 
-/* 12. CATÁLOGO */
+/* 10. BUSCADOR DE PRODUCTOS */
 
 .buscador {
     width: 100%;
-    padding: 15px;
+    margin: 0 auto 25px;
+}
+
+.buscador input {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
     border: 1px solid #D5E2D5;
-    border-radius: 10px;
-    margin: 20px 0;
+    border-radius: 8px;
+    background: #FFFFFF;
     font-size: 15px;
     outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
-.buscador:focus {
+.buscador input:focus {
     border-color: #2E7D32;
-    box-shadow: 0 0 0 3px #2E7D321A;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.10);
 }
+
+/* 11. FILTROS */
 
 .filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
     margin-bottom: 25px;
 }
 
 .filtros button,
-.producto button,
-.btn-formulario {
-    background: #2E7D32;
-    color: #FFFFFF;
-    border: none;
-    padding: 12px 18px;
-    border-radius: 9px;
-    cursor: pointer;
-    margin: 5px;
-    font-weight: bold;
-    transition: all 0.3s ease;
+.filtros a {
+    padding: 9px 15px;
+    border: 1px solid #C8DCC8;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #2E7D32;
 }
 
 .filtros button:hover,
-.producto button:hover,
-.btn-formulario:hover {
-    background: #1B5E20;
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px #2E7D3240;
+.filtros a:hover {
+    color: #FFFFFF;
+    background: #2E7D32;
 }
 
-/* CUADRÍCULA DE PRODUCTOS */
+/* 12. CATÁLOGO DE PRODUCTOS */
 
 .productos {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     gap: 22px;
-    align-items: stretch;
 }
 
-/* TARJETA DE PRODUCTO */
-
 .producto {
-    width: 100%;
-    min-width: 0;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
     background: #FFFFFF;
-    padding: 25px;
-    border-radius: 16px;
-    text-align: center;
     border: 1px solid #E5EEE5;
-    box-shadow: 0 5px 15px #0000000D;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    overflow: hidden;
+    transition: 0.2s ease;
 }
 
 .producto:hover {
-    transform: translateY(-7px);
-    box-shadow: 0 12px 25px #00000015;
+    border-color: #A5D6A7;
+    transform: translateY(-3px);
 }
 
-.producto .icono {
-    font-size: 50px;
+.producto img.imagen-producto {
+    display: block;
+    width: 100%;
+    max-width: 200px;
+    height: 180px;
+    object-fit: contain;
+    margin: 0 auto 15px;
 }
 
 .producto h3 {
     color: #1B5E20;
+    font-size: 19px;
     margin-bottom: 8px;
 }
 
-.producto > p {
+.producto p {
     color: #68756A;
+    margin-bottom: 8px;
 }
-
-/* FOTOGRAFÍAS DEL CATÁLOGO */
-
-.producto .imagen-producto {
-    display: block;
-    width: 100%;
-    height: 190px;
-    object-fit: contain;
-    padding: 10px;
-    margin: 0 auto 15px;
-    background: #F9FCF9;
-    border-radius: 12px;
-    transition: transform 0.3s ease;
-}
-
-.producto:hover .imagen-producto {
-    transform: scale(1.04);
-}
-
-/* PRECIO Y BOTÓN */
 
 .producto .precio {
-    display: block;
-    color: #2E7D32;
-    font-size: 21px;
+    color: #1B5E20;
+    font-size: 19px;
     font-weight: bold;
-    margin: 12px;
+    margin-top: auto;
 }
 
 .producto button {
     width: 100%;
-    margin: 12px 0 0;
-    padding: 13px;
-    font-size: 14px;
+    margin-top: 14px;
+    padding: 12px;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    background: #2E7D32;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.producto button:hover {
+    background: #1B5E20;
 }
 
 /* 13. CARRITO */
 
 .carrito {
+    margin-top: 40px;
+    padding: 25px;
     background: #FFFFFF;
-    padding: 28px;
-    margin-top: 35px;
-    border-radius: 15px;
     border: 1px solid #E5EEE5;
-    box-shadow: 0 5px 15px #0000000D;
+    border-radius: 12px;
+}
+
+.carrito h2,
+.carrito h3 {
+    color: #1B5E20;
+    margin-bottom: 15px;
 }
 
 .carrito p {
-    margin: 10px 0;
+    color: #536357;
 }
 
 .producto-carrito {
-    padding: 15px;
-    margin-bottom: 12px;
-    background: #F5F8F5;
-    border: 1px solid #E5EEE5;
-    border-radius: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    padding: 12px 0;
+    border-bottom: 1px solid #E5EEE5;
 }
 
-.producto-carrito h4 {
+.carrito button {
+    padding: 10px 16px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 7px;
+    background: #2E7D32;
+    color: #FFFFFF;
+    font-weight: bold;
+}
+
+.carrito button:hover {
+    background: #1B5E20;
+}
+
+#vaciar {
+    background: #B3261E;
+}
+
+#vaciar:hover {
+    background: #8E1B16;
+}
+
+#total,
+.carrito-total {
     color: #1B5E20;
-    margin-bottom: 8px;
-}
-
-.producto-carrito p {
-    color: #536357;
-    margin: 5px 0;
+    font-size: 20px;
+    font-weight: bold;
 }
 
 /* 14. SERVICIOS */
@@ -476,306 +525,214 @@ footer a:hover {
 }
 
 .servicio {
-    background: #FFFFFF;
     padding: 28px;
-    border-radius: 15px;
+    background: #FFFFFF;
     border: 1px solid #E5EEE5;
-    box-shadow: 0 5px 15px #0000000D;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border-radius: 12px;
+    transition: 0.2s ease;
 }
 
 .servicio:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 10px 22px #00000015;
+    border-color: #A5D6A7;
+    transform: translateY(-3px);
 }
 
-/* 15. CONTACTO */
+.servicio h3 {
+    color: #1B5E20;
+    margin-bottom: 10px;
+}
+
+.servicio p {
+    color: #68756A;
+}
+
+/* 15. FORMULARIO DE CONTACTO */
 
 .formulario {
+    width: 100%;
     max-width: 650px;
-    margin: auto;
+    margin: 0 auto;
+    padding: 30px;
     background: #FFFFFF;
-    padding: 32px;
-    border-radius: 18px;
     border: 1px solid #E5EEE5;
-    box-shadow: 0 6px 20px #00000010;
+    border-radius: 12px;
+}
+
+.formulario h2 {
+    color: #1B5E20;
+    margin-bottom: 22px;
 }
 
 .formulario label {
     display: block;
-    margin-top: 15px;
+    margin: 15px 0 7px;
+    color: #344438;
     font-weight: bold;
-    color: #1B5E20;
 }
 
 .formulario input,
-.formulario textarea,
-.formulario select {
+.formulario select,
+.formulario textarea {
+    display: block;
     width: 100%;
     padding: 13px;
-    margin-top: 7px;
     border: 1px solid #D5E2D5;
-    border-radius: 9px;
-    font-family: Arial, sans-serif;
+    border-radius: 7px;
+    background: #FFFFFF;
+    color: #26352A;
+    font-family: inherit;
+    font-size: 15px;
     outline: none;
-    transition: border 0.3s ease, box-shadow 0.3s ease;
 }
 
 .formulario input:focus,
-.formulario textarea:focus,
-.formulario select:focus {
+.formulario select:focus,
+.formulario textarea:focus {
     border-color: #2E7D32;
-    box-shadow: 0 0 0 3px #2E7D321A;
+    box-shadow: 0 0 0 3px rgba(46, 125, 50, 0.10);
 }
 
 .formulario textarea {
-    min-height: 120px;
+    min-height: 130px;
     resize: vertical;
+}
+
+.btn-formulario {
+    width: 100%;
+    margin-top: 20px;
+    padding: 14px;
+    border: none;
+    border-radius: 7px;
+    color: #FFFFFF;
+    background: #2E7D32;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.btn-formulario:hover {
+    background: #1B5E20;
 }
 
 #mensaje {
     margin-top: 15px;
-}
-
-/* 16. DISEÑO ESPECIAL DEL CATÁLOGO */
-
-.catalogo-portada {
-    padding: 65px 20px;
-}
-
-.catalogo-portada h1 {
-    color: #1B5E20;
-    font-size: 38px;
-    margin: 15px 0;
-}
-
-.catalogo-portada p {
-    color: #536357;
-    max-width: 600px;
-    margin: auto;
-}
-
-.catalogo-intro {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 20px;
-    flex-wrap: wrap;
-    margin-bottom: 30px;
-}
-
-.catalogo-intro h2 {
-    color: #1B5E20;
-    margin-bottom: 8px;
-}
-
-.catalogo-intro p {
-    color: #68756A;
-}
-
-.catalogo-sello {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-    background: white;
-    padding: 15px;
-    border-radius: 12px;
-    border: 1px solid #E5EEE5;
-}
-
-.catalogo-sello span {
-    background: #E8F5E9;
-    color: #2E7D32;
-    padding: 10px;
-    border-radius: 10px;
-    font-size: 25px;
-}
-
-.catalogo-sello strong,
-.catalogo-sello small {
-    display: block;
-}
-
-.catalogo-sello strong {
-    color: #1B5E20;
-}
-
-.catalogo-sello small {
-    color: #777;
-}
-
-.zona-buscador {
-    background: white;
-    padding: 25px;
-    border-radius: 15px;
-    margin-bottom: 35px;
-    border: 1px solid #E5EEE5;
-    box-shadow: 0 5px 15px #00000008;
-}
-
-.zona-buscador label {
-    display: block;
     color: #1B5E20;
     font-weight: bold;
-    margin-bottom: 10px;
 }
 
-.zona-buscador .buscador {
-    margin: 0;
+/* 16. PIE DE PÁGINA */
+
+footer {
+    padding: 35px 7%;
+    background: #183D22;
+    color: #FFFFFF;
 }
 
-.catalogo-subtitulo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-bottom: 20px;
+footer h3 {
+    margin-bottom: 12px;
 }
 
-.catalogo-subtitulo h2 {
-    color: #1B5E20;
+footer p {
+    color: #DCE8DC;
+    margin: 5px 0;
 }
 
-.catalogo-subtitulo span {
-    color: #777;
-    font-size: 14px;
+footer a {
+    color: #FFFFFF;
 }
 
-.carrito-encabezado {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 10px;
-    margin-bottom: 20px;
+footer a:hover {
+    text-decoration: underline;
 }
 
-.carrito-encabezado h2 {
-    color: #1B5E20;
+.footer-contenido {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
-.carrito-encabezado span {
-    background: #E8F5E9;
-    color: #2E7D32;
-    padding: 7px 13px;
-    border-radius: 20px;
-    font-size: 13px;
-    font-weight: bold;
-}
-
-.carrito-resumen {
-    padding: 12px;
-    background: #F5F8F5;
-    border-radius: 9px;
-}
-
-.carrito-total {
-    border-top: 1px solid #E5EEE5;
-    margin-top: 20px;
-    padding-top: 20px;
-}
-
-.carrito-total h3 {
-    color: #1B5E20;
-}
-
-.catalogo-mensaje {
+.footer-final {
+    margin-top: 25px;
+    padding-top: 18px;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
     text-align: center;
-    background: #E8F5E9;
-    padding: 40px 20px;
-    border-radius: 18px;
-    margin-top: 45px;
 }
 
-.catalogo-mensaje span {
-    font-size: 40px;
-}
+/* 17. ACCESIBILIDAD */
 
-.catalogo-mensaje h2 {
-    color: #1B5E20;
-    margin: 12px 0;
-}
-
-.catalogo-mensaje p {
-    color: #536357;
-    max-width: 550px;
-    margin: auto;
-}
-
-/* 17. ANIMACIONES */
-
-.portada,
-.beneficios,
-.contenido {
-    animation: aparecer 0.8s ease;
-}
-
-@keyframes aparecer {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* 18. ACCESIBILIDAD */
-
-a:focus-visible,
 button:focus-visible,
+a:focus-visible,
 input:focus-visible,
-textarea:focus-visible,
-select:focus-visible {
+select:focus-visible,
+textarea:focus-visible {
     outline: 3px solid #81C784;
     outline-offset: 3px;
 }
 
-/* 19. DISEÑO RESPONSIVE */
+/* 18. TABLETAS */
 
 @media (max-width: 900px) {
+    .encabezado {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    nav {
+        width: 100%;
+    }
 
     .portada {
         gap: 25px;
         padding: 55px 6%;
     }
 
-    .portada h1 {
-        font-size: 38px;
-    }
-
-    .tarjetas,
     .productos {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
+
+    .tarjetas {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
-@media (max-width: 700px) {
+/* 19. CELULARES */
 
+@media (max-width: 600px) {
     .encabezado {
-        flex-direction: column;
-        text-align: center;
+        padding: 18px 5%;
+    }
+
+    .logo h1,
+    .logo h2 {
+        font-size: 20px;
     }
 
     nav {
-        justify-content: center;
+        gap: 5px;
+    }
+
+    nav a {
+        padding: 8px 10px;
+        font-size: 13px;
     }
 
     .portada {
         grid-template-columns: 1fr;
-        text-align: center;
-        padding: 45px 6%;
+        padding: 40px 6%;
     }
 
-    .portada h1 {
-        font-size: 34px;
+    .texto-portada h1 {
+        font-size: 32px;
     }
 
-    .imagen-portada {
-        height: 280px;
+    .imagen-portada img {
+        height: 260px;
+    }
+
+    .beneficios {
+        grid-template-columns: 1fr;
+        gap: 5px;
     }
 
     .tarjetas,
@@ -785,73 +742,1049 @@ select:focus-visible {
     }
 
     .contenido {
-        padding: 50px 5%;
+        padding: 45px 6%;
     }
 
-    .contenido h2 {
-        font-size: 27px;
+    .promociones {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 5% 40px;
+        padding: 25px;
+    }
+
+    .promocion-icono {
+        font-size: 55px;
+    }
+
+    .titulo-pagina {
+        padding: 35px 15px;
     }
 
     .titulo-pagina h1 {
-        font-size: 30px;
+        font-size: 28px;
+    }
+
+    .seccion,
+    .contenedor {
+        width: 90%;
+        margin: 30px auto;
     }
 
     .formulario {
         padding: 22px;
     }
 
-    .catalogo-portada h1 {
-        font-size: 30px;
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 22px;
     }
 
-    .catalogo-intro {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .catalogo-sello {
-        width: 100%;
-    }
-
-    .catalogo-subtitulo {
-        flex-direction: column;
-        align-items: flex-start;
-    }
-
-    .carrito-encabezado {
-        align-items: flex-start;
+    .producto-carrito {
+        flex-wrap: wrap;
     }
 }
 
 /* 20. RESPETAR PREFERENCIAS DE MOVIMIENTO */
 
 @media (prefers-reduced-motion: reduce) {
-
-    html {
-        scroll-behavior: auto;
-    }
-
     *,
     *::before,
     *::after {
-        animation-duration: 0.01ms !important;
+        scroll-behavior: auto !important;
         transition-duration: 0.01ms !important;
+        animation-duration: 0.01ms !important;
     }
 }
 
-/* CORRECCIÓN DEL TAMAÑO DE IMAGEN */
 
-#lista-productos .producto {
-    width: 100%;
-    max-width: 320px;
-    margin: 0 auto;
+/* ==================================================
+   FARMACIA LA ESQUINA
+   CARRITO PROFESIONAL Y NOTIFICACIONES
+================================================== */
+
+/* CONTENEDOR DE PRODUCTOS DEL CARRITO */
+
+#productos-carrito {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
 }
 
-#lista-productos .producto img.imagen-producto {
+/* TARJETA DE CADA PRODUCTO */
+
+.producto-carrito {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+    padding: 16px;
+    background: #ffffff;
+    border: 1px solid #e3ebe3;
+    border-radius: 14px;
+    transition: all 0.3s ease;
+}
+
+.producto-carrito:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+}
+
+/* INFORMACIÓN DEL PRODUCTO */
+
+.info-carrito h4 {
+    color: #245c32;
+    font-size: 16px;
+    margin-bottom: 6px;
+}
+
+.info-carrito p {
+    color: #68776b;
+    font-size: 14px;
+}
+
+/* CONTROLES DE CANTIDAD */
+
+.controles-cantidad {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.controles-cantidad span {
+    font-weight: bold;
+    min-width: 20px;
+    text-align: center;
+}
+
+.controles-cantidad button {
+    width: 34px;
+    height: 34px;
+    border: none;
+    border-radius: 9px;
+    background: #e7f3e8;
+    color: #247239;
+    font-size: 21px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.controles-cantidad button:hover {
+    background: #2e7d32;
+    color: white;
+    transform: scale(1.08);
+}
+
+/* ELIMINAR PRODUCTO */
+
+.eliminar-producto {
+    border: none;
+    background: #fff0f0;
+    padding: 10px;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: 0.2s ease;
+}
+
+.eliminar-producto:hover {
+    background: #ffdddd;
+    transform: scale(1.1);
+}
+
+/* CARRITO VACÍO */
+
+.carrito-vacio {
+    text-align: center;
+    padding: 30px 15px;
+    color: #777777;
+    font-size: 16px;
+}
+
+/* NOTIFICACIONES */
+
+.notificacion {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 9999;
+    background: #2e7d32;
+    color: white;
+    padding: 15px 22px;
+    border-radius: 12px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.18);
+    opacity: 0;
+    transform: translateX(120%);
+    transition: all 0.35s ease;
+    pointer-events: none;
+    font-weight: bold;
+}
+
+.notificacion.mostrar {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    .producto-carrito {
+        gap: 12px;
+        padding: 13px;
+    }
+
+    .info-carrito {
+        width: 100%;
+    }
+
+    .notificacion {
+        top: 15px;
+        right: 10px;
+        left: 10px;
+        text-align: center;
+    }
+
+}
+
+
+/* ==================================================
+   FARMACIA LA ESQUINA
+   CATÁLOGO PREMIUM - FAVORITOS Y FILTROS
+================================================== */
+
+
+/* 1. SECCIÓN DEL CATÁLOGO */
+
+.catalogo {
+    width: 100%;
+}
+
+.catalogo > h2 {
+    color: #1b5e20;
+    font-size: 30px;
+    margin-bottom: 12px;
+}
+
+.catalogo > p {
+    color: #68776b;
+    margin-bottom: 25px;
+    line-height: 1.6;
+}
+
+
+/* 2. BUSCADOR */
+
+.buscador {
+    margin: 25px 0;
+}
+
+.buscador input {
+    width: 100%;
+    padding: 16px 20px;
+    border: 1px solid #dce8dd;
+    border-radius: 14px;
+    background: #ffffff;
+    font-size: 16px;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+.buscador input:focus {
+    border-color: #2e7d32;
+    box-shadow: 0 0 0 4px rgba(46, 125, 50, 0.10);
+}
+
+
+/* 3. FILTROS DE CATEGORÍAS */
+
+.filtros {
+    margin: 30px 0;
+}
+
+.filtros h3 {
+    color: #245c32;
+    margin-bottom: 15px;
+}
+
+.botones-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.filtro {
+    padding: 12px 20px;
+    border: 1px solid #dce8dd;
+    border-radius: 30px;
+    background: #ffffff;
+    color: #315c38;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filtro:hover {
+    background: #e8f5e9;
+    border-color: #2e7d32;
+    transform: translateY(-2px);
+}
+
+.filtro.activo {
+    background: #2e7d32;
+    border-color: #2e7d32;
+    color: #ffffff;
+    box-shadow: 0 4px 12px rgba(46, 125, 50, 0.20);
+}
+
+
+/* 4. SECCIÓN DE FAVORITOS */
+
+.seccion-favoritos {
+    margin: 30px 0;
+    padding: 20px;
+    background: #f0f8f0;
+    border: 1px solid #dcebdc;
+    border-radius: 15px;
+}
+
+.encabezado-favoritos {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.encabezado-favoritos h3 {
+    color: #245c32;
+}
+
+#mostrar-favoritos {
+    padding: 10px 18px;
+    background: #ffffff;
+    color: #2e7d32;
+    border: 1px solid #2e7d32;
+    border-radius: 25px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#mostrar-favoritos:hover,
+#mostrar-favoritos.activo {
+    background: #2e7d32;
+    color: #ffffff;
+}
+
+.seccion-favoritos > p {
+    color: #68776b;
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+
+/* 5. INFORMACIÓN DEL CATÁLOGO */
+
+.informacion-catalogo {
+    margin: 25px 0 15px;
+    color: #536b57;
+    font-weight: 600;
+}
+
+
+/* 6. TARJETAS DE PRODUCTOS */
+
+.productos .producto {
+    position: relative;
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos .producto:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(0, 0, 0, 0.10);
+}
+
+
+/* 7. BOTÓN DE FAVORITOS */
+
+.boton-favorito {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border: none;
+    border-radius: 50%;
+    background: #ffffff;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.10);
+    font-size: 21px;
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.boton-favorito:hover {
+    transform: scale(1.15);
+    background: #fff0f0;
+}
+
+.boton-favorito.seleccionado {
+    animation: aparecerCorazon 0.3s ease;
+}
+
+@keyframes aparecerCorazon {
+    0% {
+        transform: scale(0.7);
+    }
+
+    60% {
+        transform: scale(1.2);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+
+/* 8. PRODUCTOS NO ENCONTRADOS */
+
+.sin-productos {
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 35px 15px;
+    background: #f5f8f5;
+    border-radius: 15px;
+    color: #68776b;
+    font-size: 17px;
+}
+
+
+/* 9. ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    .catalogo > h2 {
+        font-size: 25px;
+    }
+
+    .botones-filtros {
+        gap: 8px;
+    }
+
+    .filtro {
+        padding: 10px 14px;
+        font-size: 13px;
+    }
+
+    .encabezado-favoritos {
+        align-items: flex-start;
+    }
+
+    .seccion-favoritos {
+        padding: 16px;
+    }
+
+    .boton-favorito {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+
+/* ==================================================
+   FARMACIA LA ESQUINA
+   GALERÍA DE MEDICAMENTOS SUJETOS A RECETA
+================================================== */
+
+.seccion-receta {
+    margin: 60px auto;
+    padding: 45px 25px;
+    max-width: 1250px;
+    background: #FFFFFF;
+    border-radius: 22px;
+    box-shadow: 0 8px 30px rgba(30, 80, 45, 0.08);
+}
+
+.encabezado-receta {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+.etiqueta-receta {
+    display: inline-block;
+    padding: 8px 16px;
+    background: #E8F5E9;
+    color: #2E7D32;
+    border-radius: 30px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.encabezado-receta h2 {
+    margin: 18px 0 12px;
+    color: #1B5E20;
+    font-size: 30px;
+}
+
+.encabezado-receta p {
+    color: #647067;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+.imagen-disponibilidad {
     display: block;
     width: 100%;
-    max-width: 250px;
-    height: 180px;
+    max-width: 650px;
+    height: 240px;
     object-fit: contain;
-    margin: 0 auto 15px;
+    margin: 25px auto;
+    border-radius: 15px;
 }
+
+/* GALERÍA */
+
+.galeria-receta {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 25px;
+}
+
+/* TARJETAS */
+
+.tarjeta-receta {
+    background: #FFFFFF;
+    border: 1px solid #E5EDE6;
+    border-radius: 18px;
+    overflow: hidden;
+    text-align: center;
+    padding: 18px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-receta:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 12px 25px rgba(30, 80, 45, 0.12);
+}
+
+.tarjeta-receta img {
+    width: 100%;
+    height: 190px;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+.contenido-tarjeta-receta h3 {
+    color: #26352A;
+    font-size: 19px;
+    margin-bottom: 12px;
+}
+
+.estado-receta {
+    display: inline-block;
+    padding: 7px 12px;
+    background: #FFF4DF;
+    color: #8A5A00;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.contenido-tarjeta-receta p {
+    color: #68746B;
+    font-size: 14px;
+    line-height: 1.6;
+    margin: 15px 0;
+}
+
+.boton-receta {
+    display: inline-block;
+    padding: 11px 25px;
+    background: #2E7D32;
+    color: #FFFFFF;
+    text-decoration: none;
+    border-radius: 9px;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.boton-receta:hover {
+    background: #1B5E20;
+}
+
+/* AVISO */
+
+.aviso-receta {
+    margin-top: 30px;
+    padding: 18px;
+    background: #F1F8F2;
+    border-left: 4px solid #2E7D32;
+    border-radius: 8px;
+    color: #405A43;
+    line-height: 1.6;
+    text-align: center;
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 600px) {
+
+    .seccion-receta {
+        margin: 30px 12px;
+        padding: 28px 15px;
+    }
+
+    .encabezado-receta h2 {
+        font-size: 23px;
+    }
+
+    .imagen-disponibilidad {
+        height: 180px;
+    }
+
+    .galeria-receta {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 12px;
+    }
+
+    .tarjeta-receta {
+        padding: 12px;
+    }
+
+    .tarjeta-receta img {
+        height: 135px;
+    }
+
+    .contenido-tarjeta-receta h3 {
+        font-size: 16px;
+    }
+
+    .contenido-tarjeta-receta p {
+        font-size: 12px;
+    }
+
+    .boton-receta {
+        padding: 9px 12px;
+        font-size: 13px;
+    }
+}
+
+/* ==================================================
+   CÓDIGO QR - TAMAÑO PEQUEÑO Y CENTRADO
+================================================== */
+
+.imagen-qr {
+    display: block;
+    width: 150px;
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    margin: 15px auto;
+}
+
+/* BOTÓN FLOTANTE DE WHATSAPP */
+
+.whatsapp-flotante {
+    position: fixed;
+    right: 25px;
+    bottom: 25px;
+    z-index: 9999;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 13px 20px;
+    border-radius: 50px;
+
+    background: #25D366;
+    color: white;
+
+    font-size: 14px;
+    font-weight: 600;
+    text-decoration: none;
+
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.22);
+
+    transition: all 0.3s ease;
+}
+
+.whatsapp-flotante svg {
+    width: 27px;
+    height: 27px;
+    flex-shrink: 0;
+}
+
+.whatsapp-flotante:hover {
+    background: #1DA851;
+    transform: translateY(-4px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.28);
+}
+
+/* ADAPTACIÓN PARA CELULARES */
+
+@media (max-width: 600px) {
+    .whatsapp-flotante {
+        right: 15px;
+        bottom: 18px;
+        padding: 13px;
+    }
+
+    .whatsapp-flotante span {
+        display: none;
+    }
+
+    .whatsapp-flotante svg {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+```css
+/* =====================================
+   FOOTER PROFESIONAL - FARMACIA
+===================================== */
+
+.footer-farmacia {
+    background: #173f25;
+    color: #ffffff;
+    margin-top: 60px;
+    padding: 55px 7% 0;
+    font-family: inherit;
+}
+
+.footer-contenido {
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 35px;
+    padding-bottom: 40px;
+}
+
+.footer-columna h3 {
+    color: #ffffff;
+    font-size: 19px;
+    margin-bottom: 22px;
+    position: relative;
+}
+
+.footer-columna h3::after {
+    content: "";
+    display: block;
+    width: 38px;
+    height: 3px;
+    background: #66bb6a;
+    margin-top: 10px;
+    border-radius: 5px;
+}
+
+.footer-descripcion,
+.footer-columna > p {
+    color: #d9e8dc;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.footer-eslogan {
+    color: #a5d6a7 !important;
+    font-weight: bold;
+}
+
+.footer-columna ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-columna li {
+    color: #d9e8dc;
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 12px;
+}
+
+.footer-columna a {
+    color: #d9e8dc;
+    text-decoration: none;
+    transition: 0.3s ease;
+}
+
+.footer-columna a:hover {
+    color: #81c784;
+    padding-left: 4px;
+}
+
+.footer-redes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px;
+    margin-top: 18px;
+}
+
+.footer-redes a {
+    display: inline-block;
+    background: rgba(255,255,255,0.10);
+    border: 1px solid rgba(255,255,255,0.18);
+    border-radius: 20px;
+    padding: 8px 12px;
+    font-size: 12px;
+}
+
+.footer-redes a:hover {
+    background: #2e7d32;
+    color: white;
+    padding-left: 12px;
+}
+
+.footer-usuario {
+    color: #a5d6a7 !important;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.footer-legal {
+    max-width: 1200px;
+    margin: auto;
+    border-top: 1px solid rgba(255,255,255,0.16);
+    padding: 22px 0;
+    text-align: center;
+}
+
+.footer-legal p {
+    color: #c8d8cb;
+    font-size: 12px;
+    line-height: 1.8;
+    margin: 5px 0;
+}
+
+.footer-inferior {
+    border-top: 1px solid rgba(255,255,255,0.16);
+    padding: 22px 10px;
+    text-align: center;
+}
+
+.footer-inferior p {
+    color: #d9e8dc;
+    font-size: 12px;
+    line-height: 1.7;
+    margin: 6px 0;
+}
+
+.footer-creditos {
+    color: #a5d6a7 !important;
+    font-weight: 600;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 900px) {
+    .footer-contenido {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 550px) {
+    .footer-farmacia {
+        padding: 40px 22px 0;
+    }
+
+    .footer-contenido {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-columna h3 {
+        font-size: 18px;
+    }
+
+    .footer-inferior p {
+        font-size: 11px;
+    }
+}
+
+
+/* SECCION CONOCE NUESTRA FARMACIA */
+
+.seccion-farmacia {
+    padding: 65px 7%;
+    background: #F5F8F5;
+}
+
+/* BENEFICIOS */
+
+.beneficios-farmacia {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    max-width: 1100px;
+    margin: 0 auto 75px;
+}
+
+.beneficio {
+    background: #E8F5E9;
+    padding: 25px 18px;
+    border-radius: 16px;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+
+.beneficio:hover {
+    transform: translateY(-5px);
+}
+
+.beneficio-icono {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: #FFFFFF;
+    color: #2E7D32;
+    font-size: 27px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+.beneficio h3 {
+    color: #1B5E20;
+    font-size: 17px;
+    margin-bottom: 8px;
+}
+
+.beneficio p {
+    color: #607064;
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* ENCABEZADO */
+
+.encabezado-categorias {
+    text-align: center;
+    max-width: 650px;
+    margin: 0 auto 38px;
+}
+
+.subtitulo-farmacia {
+    color: #2E7D32;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.encabezado-categorias h2 {
+    color: #1B5E20;
+    font-size: 32px;
+    margin: 12px 0;
+}
+
+.encabezado-categorias p {
+    color: #657267;
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* TARJETAS */
+
+.categorias-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    max-width: 1100px;
+    margin: auto;
+}
+
+.categoria-card {
+    background: #FFFFFF;
+    padding: 30px 25px;
+    border-radius: 18px;
+    border: 1px solid #E4EDE4;
+    box-shadow: 0 5px 18px rgba(0, 0, 0, 0.04);
+    transition: all 0.3s ease;
+}
+
+.categoria-card:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 12px 28px rgba(46, 125, 50, 0.12);
+    border-color: #A5D6A7;
+}
+
+.categoria-icono {
+    width: 65px;
+    height: 65px;
+    background: #E8F5E9;
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 22px;
+}
+
+.categoria-icono span {
+    color: #2E7D32;
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.categoria-card h3 {
+    color: #1B5E20;
+    font-size: 21px;
+    margin-bottom: 12px;
+}
+
+.categoria-card p {
+    color: #68756B;
+    font-size: 15px;
+    line-height: 1.7;
+    min-height: 75px;
+}
+
+.categoria-card a {
+    display: inline-block;
+    margin-top: 12px;
+    color: #2E7D32;
+    font-weight: 700;
+    text-decoration: none;
+}
+
+.categoria-card a span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.categoria-card a:hover span {
+    transform: translateX(5px);
+}
+
+/* DISEÑO PARA CELULARES */
+
+@media (max-width: 768px) {
+
+    .beneficios-farmacia,
+    .categorias-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .seccion-farmacia {
+        padding: 45px 5%;
+    }
+
+    .beneficios-farmacia {
+        margin-bottom: 50px;
+    }
+
+    .encabezado-categorias h2 {
+        font-size: 26px;
+    }
+
+    .categoria-card p {
+        min-height: auto;
+    }
+}
+

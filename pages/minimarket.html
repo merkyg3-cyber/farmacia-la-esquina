@@ -1,0 +1,283 @@
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Minimarket | Farmacia La Esquina</title>
+
+    <meta name="description"
+        content="Compra dulces, helados, galletas, bebidas y comestibles en el Minimarket de Farmacia La Esquina.">
+
+<link rel="stylesheet" href="../css/estilos.css">
+<link rel="stylesheet" href="../css/minimarket.css">
+<script src="../assets/js/minimarket.js" defer></script>
+</head>
+
+<body>
+
+    <!-- ENCABEZADO -->
+
+    <header class="encabezado-minimarket">
+
+        <div class="contenedor-minimarket">
+
+            <a href="index.html" class="logo-minimarket">
+                <span>💚</span>
+                Farmacia La Esquina
+            </a>
+
+            <nav class="navegacion-minimarket">
+                <a href="../index.html">Inicio</a>
+                <a href="../productos.html">Farmacia</a>
+                <a href="minimarket.html" class="activo">Minimarket</a>
+                <a href="../contacto.html">Contacto</a>
+            </nav>
+
+            <button type="button" id="abrir-carrito">
+                🛒 Carrito
+                <span id="contador-minimarket">0</span>
+            </button>
+
+        </div>
+
+    </header>
+
+
+    <!-- PRESENTACIÓN -->
+
+    <section class="hero-minimarket">
+
+        <div class="contenedor-minimarket">
+
+            <span class="etiqueta-minimarket">
+                TU TIENDA DE CONFIANZA
+            </span>
+
+            <h1>
+                Todo lo que te gusta,
+                <span>en un solo lugar.</span>
+            </h1>
+
+            <p>
+                Descubre nuestra selección de helados, dulces,
+                galletas, bebidas y productos para disfrutar.
+            </p>
+
+            <a href="#catalogo-minimarket">
+                Explorar productos ↓
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- CATÁLOGO -->
+
+    <main class="contenedor-minimarket" id="catalogo-minimarket">
+
+        <section class="titulo-catalogo">
+
+            <span>MINIMARKET</span>
+
+            <h2>Comestibles y dulces</h2>
+
+            <p>
+                Encuentra tus productos favoritos.
+            </p>
+
+        </section>
+
+
+        <!-- BUSCADOR -->
+
+        <div class="herramientas-minimarket">
+
+            <input
+                type="search"
+                id="buscador-minimarket"
+                placeholder="Buscar productos..."
+                aria-label="Buscar productos">
+
+            <select id="ordenar-minimarket">
+                <option value="predeterminado">Ordenar por</option>
+                <option value="nombre">Nombre</option>
+                <option value="menor-precio">Menor precio</option>
+                <option value="mayor-precio">Mayor precio</option>
+            </select>
+
+            <select id="productos-por-pagina">
+                <option value="30">Mostrar 30</option>
+                <option value="50">Mostrar 50</option>
+                <option value="100">Mostrar 100</option>
+            </select>
+
+        </div>
+
+
+        <!-- CATEGORÍAS -->
+
+        <div class="categorias-minimarket">
+
+            <button class="categoria-mini activo"
+                data-categoria="Todos">
+                Todos
+            </button>
+
+            <button class="categoria-mini"
+                data-categoria="Helados">
+                Helados
+            </button>
+
+            <button class="categoria-mini"
+                data-categoria="Dulces">
+                Dulces
+            </button>
+
+            <button class="categoria-mini"
+                data-categoria="Galletas">
+                Galletas
+            </button>
+
+            <button class="categoria-mini"
+                data-categoria="Snacks">
+                Snacks
+            </button>
+
+            <button class="categoria-mini"
+                data-categoria="Bebidas">
+                Bebidas
+            </button>
+
+        </div>
+
+
+        <!-- VISTAS -->
+
+        <div class="controles-vista">
+
+            <span id="cantidad-minimarket">
+                Productos disponibles
+            </span>
+
+            <div>
+                <button class="vista-mini activo"
+                    data-vista="cuadricula">
+                    ▦ Cuadrícula
+                </button>
+
+                <button class="vista-mini"
+                    data-vista="lista">
+                    ☰ Lista
+                </button>
+
+                <button class="vista-mini"
+                    data-vista="tabla">
+                    ▤ Tabla
+                </button>
+            </div>
+
+        </div>
+
+
+        <!-- PRODUCTOS -->
+
+        <section id="lista-minimarket"
+            class="productos-minimarket">
+
+            <!-- JavaScript cargará los productos -->
+
+        </section>
+
+
+        <!-- PAGINACIÓN -->
+
+        <div id="paginacion-minimarket"
+            class="paginacion-minimarket">
+        </div>
+
+    </main>
+
+
+    <!-- CARRITO -->
+
+    <div id="panel-carrito" class="panel-carrito-mini">
+
+        <div class="encabezado-carrito-mini">
+
+            <h2>Mi carrito</h2>
+
+            <button type="button" id="cerrar-carrito">
+                ✕
+            </button>
+
+        </div>
+
+        <div id="productos-carrito-mini">
+            <p>Tu carrito está vacío.</p>
+        </div>
+
+        <div class="resumen-carrito-mini">
+
+            <h3>
+                Total:
+                <span id="total-minimarket">RD$ 0.00</span>
+            </h3>
+
+            <button type="button" id="vaciar-carrito-mini">
+                Vaciar carrito
+            </button>
+
+            <button type="button" id="enviar-whatsapp-mini">
+                💬 Enviar pedido por WhatsApp
+            </button>
+
+        </div>
+
+    </div>
+
+    <div id="fondo-carrito-mini"></div>
+
+
+    <!-- PIE DE PÁGINA -->
+
+    <footer class="footer-minimarket">
+
+        <div class="contenedor-minimarket">
+
+            <h3>Farmacia La Esquina</h3>
+
+            <p>
+                Tu farmacia y minimarket de confianza.
+            </p>
+
+            <p>
+                © 2026 Farmacia La Esquina.
+                Todos los derechos reservados.
+            </p>
+
+        </div>
+
+    </footer>
+
+    <span>¿Necesitas ayuda? Escríbenos</span>
+</a>
+<a
+    href="https://wa.me/18095551234?text=Hola,%20Farmacia%20La%20Esquina"
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp">
+
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16 .5A15.4 15.4 0 0 0 2.7 23.7L.5 31.5l8-2.1A15.5 15.5 0 1 0 16 .5zm0 28a12.5 12.5 0 0 1-6.4-1.8l-.5-.3-4.7 1.2 1.3-4.6-.3-.5A12.5 12.5 0 1 1 16 28.5zm6.9-9.4c-.4-.2-2.2-1.1-2.5-1.2-.4-.1-.6-.2-.9.2-.3.4-1 1.2-1.2 1.4-.2.2-.4.3-.8.1-.4-.2-1.6-.6-3-1.9-1.1-1-1.9-2.2-2.1-2.6-.2-.4 0-.6.2-.8l.6-.7c.2-.2.3-.4.4-.6.1-.2 0-.5 0-.7-.1-.2-.9-2-1.2-2.7-.3-.7-.6-.6-.9-.6h-.8c-.3 0-.7.1-1 .5-.4.4-1.3 1.3-1.3 3.1s1.3 3.5 1.5 3.7c.2.3 2.6 4 6.3 5.5.9.4 1.6.6 2.1.7.9.3 1.7.2 2.3.1.7-.1 2.2-.9 2.5-1.8.3-.9.3-1.6.2-1.8-.1-.1-.4-.3-.8-.5z"/>
+    </svg>
+
+    <span>WhatsApp</span>
+</a>
+</body>
+</html>
+

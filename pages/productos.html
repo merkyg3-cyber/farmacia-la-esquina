@@ -8,73 +8,175 @@
 
     <title>Productos | Farmacia La Esquina</title>
 
-    <!-- Conectar CSS -->
+    <meta name="description" content="Descubre los productos disponibles en Farmacia La Esquina. Encuentra medicamentos, vitaminas y productos de higiene.">
+
+    <!-- ESTILOS -->
     <link rel="stylesheet" href="../css/styles.css">
 
-    <!-- Control del tamaño de las imágenes -->
-    <style>
-        #lista-productos .producto img.imagen-producto {
-            display: block;
-            width: 200px !important;
-            max-width: 100% !important;
-            height: 180px !important;
-            object-fit: contain !important;
-            margin: 15px auto;
-        }
-    </style>
-
-    <!-- Conectar JavaScript -->
+    <!-- JAVASCRIPT -->
     <script src="../assets/js/main.js" defer></script>
+
 </head>
 
 <body>
 
     <!-- ENCABEZADO -->
-    <header class="header">
 
-        <h1>Farmacia La Esquina</h1>
+    <header class="encabezado">
+
+        <div class="logo">
+
+            <span>💊</span>
+
+            <div>
+                <h1>Farmacia La Esquina</h1>
+                <small>Tu salud es nuestra prioridad</small>
+            </div>
+
+        </div>
 
         <nav>
+
             <a href="../index.html">Inicio</a>
-            <a href="productos.html">Productos</a>
-            <a href="servicio.html">Servicios</a>
+
+            <a class="activo" href="productos.html">Productos</a>
+
+            <a href="servicios.html">Servicios</a>
+
             <a href="contacto.html">Contacto</a>
+
         </nav>
 
     </header>
 
 
     <!-- CONTENIDO PRINCIPAL -->
+
     <main class="contenedor">
 
-        <h2>Nuestros productos</h2>
+        <section class="catalogo">
 
-        <p>
-            Encuentra los productos que necesitas para tu bienestar.
-        </p>
+            <h2>Nuestros productos</h2>
 
-
-        <!-- BUSCADOR -->
-        <div class="buscador">
-
-            <input
-                type="text"
-                id="buscador"
-                placeholder="Buscar productos..."
-            >
-
-        </div>
+            <p>
+                Encuentra los productos que necesitas
+                para cuidar de tu salud y bienestar.
+            </p>
 
 
-        <!-- LISTA DE PRODUCTOS -->
-        <div id="lista-productos" class="productos">
+            <!-- BUSCADOR -->
 
-            <!-- JavaScript mostrará aquí los productos -->
+            <div class="buscador">
 
-        </div>
+                <input
+                    type="search"
+                    id="buscador"
+                    placeholder="🔍 Buscar medicamentos, vitaminas..."
+                    aria-label="Buscar productos"
+                >
+
+            </div>
+
+
+           
+<!-- FILTROS DE CATEGORÍAS -->
+
+<section class="filtros">
+
+    <h3>Explora nuestras categorías</h3>
+
+    <div class="botones-filtros">
+
+        <button
+            type="button"
+            class="filtro activo"
+            data-categoria="Todos">
+            Todos
+        </button>
+
+        <button
+            type="button"
+            class="filtro"
+            data-categoria="Medicamentos">
+            💊 Medicamentos
+        </button>
+
+        <button
+            type="button"
+            class="filtro"
+            data-categoria="Vitaminas">
+            🍊 Vitaminas
+        </button>
+
+        <button
+            type="button"
+            class="filtro"
+            data-categoria="Higiene">
+            🧴 Higiene
+        </button>
+
+        <button
+            type="button"
+            class="filtro"
+            data-categoria="Primeros auxilios">
+            🩹 Primeros auxilios
+        </button>
+
+    </div>
+
+</section>
+
+
+
+            <!-- FAVORITOS -->
+
+            <section class="seccion-favoritos">
+
+                <div class="encabezado-favoritos">
+
+                    <h3>❤️ Mis favoritos</h3>
+
+                    <button
+                        type="button"
+                        id="mostrar-favoritos"
+                    >
+                        Ver favoritos
+                    </button>
+
+                </div>
+
+                <p>
+                    Guarda tus productos preferidos
+                    para encontrarlos fácilmente.
+                </p>
+
+            </section>
+
+
+            <!-- CONTADOR DE RESULTADOS -->
+
+            <div class="informacion-catalogo">
+
+                <p id="cantidad-resultados">
+                    Productos disponibles
+                </p>
+
+            </div>
+
+
+            <!-- LISTA DE PRODUCTOS -->
+
+            <div id="lista-productos" class="productos">
+
+                <!-- JavaScript mostrará los productos aquí -->
+
+            </div>
+
+        </section>
 
 
         <!-- CARRITO DE COMPRAS -->
+
         <section class="carrito">
 
             <h2>🛒 Mi carrito</h2>
@@ -99,12 +201,43 @@
                 Vaciar carrito
             </button>
 
-        </section>
+        
+     </section>
 
-    </main>
+     <button type="button" id="enviar-whatsapp" class="boton-whatsapp">
+    <span>💬</span> Enviar pedido por WhatsApp
+</button>
+ 
+</main>
 
+<!-- MEDICAMENTOS SUJETOS A RECETA MÉDICA -->
 
-    <!-- PIE DE PÁGINA -->
+<section class="seccion-receta" id="medicamentos-receta">
+
+    <div class="encabezado-receta">
+        <span class="etiqueta-receta">ATENCIÓN FARMACÉUTICA</span>
+
+        <h2>Medicamentos sujetos a receta médica</h2>
+
+        <p>
+            Consulta las presentaciones disponibles y recibe
+            orientación de nuestro personal farmacéutico.
+        </p>
+    </div>
+
+    <div class="galeria-receta" id="galeria-receta">
+        <!-- Las tarjetas se cargarán con JavaScript -->
+    </div>
+
+    <p class="aviso-receta">
+        Estos medicamentos requieren verificación de los
+        requisitos de dispensación correspondientes.
+    </p>
+
+</section>
+  
+<!-- PIE DE PÁGINA -->
+
     <footer>
 
         <p>
@@ -112,7 +245,24 @@
             Todos los derechos reservados.
         </p>
 
-    </footer>
+        <p>
+            Cuidamos de ti y de tu familia. 💚
+        </p>
 
+    </footer>
+<a
+    href="https://wa.me/18095551234?text=Hola,%20Farmacia%20La%20Esquina"
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16 .5C7.45.5.5 7.45.5 16c0 2.73.72 5.4 2.08 7.76L.5 31.5l7.94-2.02A15.4 15.4 0 0 0 16 31.5c8.55 0 15.5-6.95 15.5-15.5S24.55.5 16 .5zm0 28.2a12.7 12.7 0 0 1-6.48-1.78l-.46-.27-4.71 1.2 1.22-4.59-.3-.48A12.7 12.7 0 1 1 16 28.7zm6.97-9.52c-.38-.19-2.23-1.1-2.58-1.23-.35-.13-.6-.19-.85.19-.25.38-.98 1.23-1.2 1.48-.22.25-.44.28-.82.09-.38-.19-1.6-.59-3.05-1.88-1.13-1.01-1.9-2.26-2.12-2.64-.22-.38-.02-.58.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.07-.47-.03-.66-.1-.19-.85-2.04-1.17-2.8-.31-.74-.63-.64-.85-.65h-.73c-.25 0-.66.09-1.01.47-.35.38-1.33 1.3-1.33 3.15s1.36 3.65 1.55 3.9c.19.25 2.67 4.08 6.46 5.72.9.39 1.6.62 2.14.79.9.29 1.72.25 2.37.15.72-.11 2.23-.91 2.55-1.79.32-.88.32-1.64.22-1.79-.09-.16-.34-.25-.72-.44z"/>
+    </svg>
+
+    <span>¿Necesitas ayuda? Escríbenos</span>
+</a>
 </body>
+
 </html>

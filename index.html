@@ -12,7 +12,7 @@
 
     <link rel="stylesheet" href="css/styles.css">
 
-    <script src="js/main.js" defer></script>
+    <script src="assets/js/main.js" defer></script>
 </head>
 
 <body>
@@ -34,6 +34,7 @@
             <a href="pages/productos.html">Productos</a>
             <a href="pages/servicios.html">Servicios</a>
             <a href="pages/contacto.html">Contacto</a>
+            <a href="pages/minimarket.html">Minimarket</a>
         </nav>
 
     </header>
@@ -66,7 +67,6 @@
 
             </div>
 
-            <!-- IMAGEN DE LA FARMACIA -->
             <div class="imagen-portada">
 
                 <img
@@ -79,26 +79,6 @@
                     <p>Estamos aquí para cuidar de ti.</p>
                 </div>
 
-            </div>
-
-        </section>
-
-        <!-- BENEFICIOS -->
-        <section class="beneficios">
-
-            <div>
-                💚
-                <strong>Atención cercana</strong>
-            </div>
-
-            <div>
-                💊
-                <strong>Variedad de productos</strong>
-            </div>
-
-            <div>
-                🩺
-                <strong>Cuidado responsable</strong>
             </div>
 
         </section>
@@ -116,59 +96,92 @@
                 Tenemos diferentes categorías para el cuidado personal.
             </p>
 
-            <div class="tarjetas">
+           
 
-                <article class="tarjeta">
+>
 
-                    <div class="icono">💊</div>
+                  
+<section class="seccion-farmacia">
 
-                    <h3>Medicamentos</h3>
+    <div class="beneficios-farmacia">
 
-                    <p>
-                        Productos farmacéuticos para el cuidado de tu salud.
-                    </p>
+        <div class="beneficio">
+            <span class="beneficio-icono">♡</span>
+            <h3>Atención cercana</h3>
+            <p>Te atendemos con amabilidad y dedicación.</p>
+        </div>
 
-                    <a href="pages/productos.html">
-                        Ver productos →
-                    </a>
+        <div class="beneficio">
+            <span class="beneficio-icono">✚</span>
+            <h3>Variedad de productos</h3>
+            <p>Opciones para tus necesidades diarias.</p>
+        </div>
 
-                </article>
+        <div class="beneficio">
+            <span class="beneficio-icono">＋</span>
+            <h3>Cuidado responsable</h3>
+            <p>Comprometidos con tu bienestar.</p>
+        </div>
 
-                <article class="tarjeta">
+    </div>
 
-                    <div class="icono">🍊</div>
+    <div class="encabezado-categorias">
+        <span class="subtitulo-farmacia">CONOCE NUESTRA FARMACIA</span>
+        <h2>¿Qué puedes encontrar?</h2>
+        <p>
+            Explora nuestras categorías y descubre productos
+            para el cuidado de tu salud y bienestar.
+        </p>
+    </div>
 
-                    <h3>Vitaminas</h3>
+    <div class="categorias-grid">
 
-                    <p>
-                        Productos para complementar tu bienestar.
-                    </p>
-
-                    <a href="pages/productos.html">
-                        Ver productos →
-                    </a>
-
-                </article>
-
-                <article class="tarjeta">
-
-                    <div class="icono">🧴</div>
-
-                    <h3>Higiene personal</h3>
-
-                    <p>
-                        Artículos para tu cuidado y limpieza diaria.
-                    </p>
-
-                    <a href="pages/productos.html">
-                        Ver productos →
-                    </a>
-
-                </article>
-
+        <article class="categoria-card">
+            <div class="categoria-icono">
+                <span>✚</span>
             </div>
+            <h3>Medicamentos</h3>
+            <p>
+                Productos farmacéuticos para el cuidado
+                de tu salud.
+            </p>
+            <a href="pages/productos.html">
+                Ver productos <span>→</span>
+            </a>
+        </article>
 
-        </section>
+        <article class="categoria-card">
+            <div class="categoria-icono">
+                <span>✿</span>
+            </div>
+            <h3>Vitaminas</h3>
+            <p>
+                Productos para complementar
+                tu bienestar.
+            </p>
+            <a href="pages/productos.html">
+                Ver productos <span>→</span>
+            </a>
+        </article>
+
+        <article class="categoria-card">
+            <div class="categoria-icono">
+                <span>◇</span>
+            </div>
+            <h3>Higiene personal</h3>
+            <p>
+                Artículos para tu cuidado
+                y limpieza diaria.
+            </p>
+            <a href="pages/productos.html">
+                Ver productos <span>→</span>
+            </a>
+        </article>
+
+    </div>
+
+</section>
+
 
         <!-- PROMOCIONES -->
         <section class="promociones">
@@ -209,44 +222,199 @@
 
         </section>
 
-    </main>
+        <!-- CÓDIGO QR -->
+        <section class="seccion-qr">
 
-    <!-- PIE DE PÁGINA -->
-    <footer>
+            <div class="contenido-qr">
 
-        <div class="footer-contenido">
-
-            <div>
-                <h3>✚ Farmacia La Esquina</h3>
+                <h2>Visita Farmacia La Esquina</h2>
 
                 <p>
-                    Tu farmacia de confianza, cerca de ti.
+                    Escanea nuestro código QR con la cámara
+                    de tu celular y visita nuestra farmacia.
                 </p>
-            </div>
 
-            <div>
-                <h3>Enlaces rápidos</h3>
+                <img
+                    src="img/QR-Code (2).png"
+                    alt="Código QR para visitar Farmacia La Esquina"
+                    class="imagen-qr"
+                >
 
-                <p><a href="index.html">Inicio</a></p>
-                <p><a href="pages/productos.html">Productos</a></p>
-                <p><a href="pages/servicios.html">Servicios</a></p>
-                <p><a href="pages/contacto.html">Contacto</a></p>
-            </div>
+        </section>
 
-            <div>
-                <h3>Contacto</h3>
+    </main>
 
-                <p>Teléfono: 809-555-0147 (demostración)</p>
-                <p>Atención al cliente</p>
-            </div>
-
-        </div>
-
-        <div class="footer-final">
-            <p>© 2026 Farmacia La Esquina. Todos los derechos reservados.</p>
-        </div>
 
     </footer>
+<a
+    href="https://wa.me/18095551234?text=Hola,%20Farmacia%20La%20Esquina"
+    class="whatsapp-flotante"
+    target="_blank"
+    rel="noopener noreferrer"
+    aria-label="Contactar por WhatsApp"
+>
+    <svg viewBox="0 0 32 32" aria-hidden="true">
+        <path fill="currentColor" d="M16 .5C7.45.5.5 7.45.5 16c0 2.73.72 5.4 2.08 7.76L.5 31.5l7.94-2.02A15.4 15.4 0 0 0 16 31.5c8.55 0 15.5-6.95 15.5-15.5S24.55.5 16 .5zm0 28.2a12.7 12.7 0 0 1-6.48-1.78l-.46-.27-4.71 1.2 1.22-4.59-.3-.48A12.7 12.7 0 1 1 16 28.7zm6.97-9.52c-.38-.19-2.23-1.1-2.58-1.23-.35-.13-.6-.19-.85.19-.25.38-.98 1.23-1.2 1.48-.22.25-.44.28-.82.09-.38-.19-1.6-.59-3.05-1.88-1.13-1.01-1.9-2.26-2.12-2.64-.22-.38-.02-.58.17-.77.17-.17.38-.44.57-.66.19-.22.25-.38.38-.63.13-.25.07-.47-.03-.66-.1-.19-.85-2.04-1.17-2.8-.31-.74-.63-.64-.85-.65h-.73c-.25 0-.66.09-1.01.47-.35.38-1.33 1.3-1.33 3.15s1.36 3.65 1.55 3.9c.19.25 2.67 4.08 6.46 5.72.9.39 1.6.62 2.14.79.9.29 1.72.25 2.37.15.72-.11 2.23-.91 2.55-1.79.32-.88.32-1.64.22-1.79-.09-.16-.34-.25-.72-.44z"/>
+    </svg>
+
+    <span>¿Necesitas ayuda? Escríbenos</span>
+</a>
+
+<!-- =====================================
+     PIE DE PÁGINA - FARMACIA LA ESQUINA
+===================================== -->
+
+<footer class="footer-farmacia">
+
+    <div class="footer-contenido">
+
+        <!-- INFORMACIÓN DE LA FARMACIA -->
+        <div class="footer-columna">
+            <h3>Farmacia La Esquina</h3>
+
+            <p class="footer-descripcion">
+                Comprometidos con tu salud y bienestar.
+                Ofrecemos atención cercana, productos
+                de calidad y servicios farmacéuticos
+                para toda la familia.
+            </p>
+
+            <p class="footer-eslogan">
+                Tu salud, nuestra prioridad.
+            </p>
+        </div>
+
+        <!-- ENLACES -->
+        <div class="footer-columna">
+            <h3>Enlaces rápidos</h3>
+
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="pages/productos.html">Productos</a></li>
+                <li><a href="pages/servicios.html">Servicios</a></li>
+                <li><a href="pages/contacto.html">Contáctenos</a></li>
+                <li><a href="pages/minimarket.html">Minimarket</a></li>
+            </ul>
+        </div>
+
+        <!-- CONTACTO -->
+        <div class="footer-columna">
+            <h3>Contáctenos</h3>
+
+            <ul class="datos-contacto">
+                <li>
+                    <strong>Dirección:</strong>
+                    Avenida 27 de Febrero, Santiago,
+                    República Dominicana.
+                </li>
+
+                <li>
+                    <strong>Teléfono:</strong>
+                    <a href="tel:+18095551234">
+                        809-555-1234
+                    </a>
+                </li>
+
+                <li>
+                    <strong>Email:</strong>
+                    <a href="mailto:info@farmacialaesquina.com">
+                        info@farmacialaesquina.com
+                    </a>
+                </li>
+
+                <li>
+                    <strong>Horario:</strong>
+                    Lunes a sábado, 8:00 a. m. - 8:00 p. m.
+                </li>
+            </ul>
+        </div>
+
+        <!-- REDES SOCIALES -->
+        <div class="footer-columna">
+            <h3>Síguenos</h3>
+
+            <p>
+                Mantente informado sobre nuestros
+                productos, novedades y promociones.
+            </p>
+
+            <div class="footer-redes">
+
+                <a href="#"
+                   aria-label="Facebook">
+                    Facebook
+                </a>
+
+                <a href="#"
+                   aria-label="Instagram">
+                    Instagram
+                </a>
+
+                <a href="#"
+                   aria-label="TikTok">
+                    TikTok
+                </a>
+
+                <a href="#"
+                   aria-label="YouTube">
+                    YouTube
+                </a>
+
+                <a href="https://wa.me/18095551234"
+                   target="_blank"
+                   rel="noopener noreferrer"
+                   aria-label="WhatsApp">
+                    WhatsApp
+                </a>
+
+            </div>
+
+            <p class="footer-usuario">
+                @farmacialaesquina
+            </p>
+        </div>
+
+    </div>
+
+    <!-- AVISO LEGAL -->
+    <div class="footer-legal">
+
+        <p>
+            La información de este sitio web tiene fines
+            informativos y no sustituye la orientación
+            de un profesional de la salud.
+        </p>
+
+        <p>
+            Los medicamentos sujetos a receta médica
+            requieren la correspondiente prescripción.
+        </p>
+
+    </div>
+
+    <!-- DERECHOS RESERVADOS -->
+    <div class="footer-inferior">
+
+        <p>
+            © 2026 Farmacia La Esquina.
+            Todos los derechos reservados.
+        </p>
+
+        <p>
+            Queda prohibida la reproducción, distribución
+            o modificación del contenido, diseño, imágenes
+            y elementos de este sitio web sin autorización
+            previa de sus respectivos titulares.
+        </p>
+
+        <p class="footer-creditos">
+            Diseñado para Farmacia La Esquina |
+            Santiago, República Dominicana.
+        </p>
+
+    </div>
+
+</footer>
 
 </body>
 </html>
